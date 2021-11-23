@@ -9,7 +9,8 @@ For the next part I used a for loop to generate iterations for 4 if conditional 
 
 The final website looks like this image:
 
-![Password-Generator]()
+![Password-Generator](https://github.com/josevidmal/u3-hw-javascript-password-generator/blob/main/assets/images/03-javascript-homework-demo.png?raw=true)
 
 The link for the deployed application is this:
 
+https://josevidmal.github.io/u3-hw-javascript-password-generator/
