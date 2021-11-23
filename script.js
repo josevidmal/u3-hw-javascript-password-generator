@@ -48,4 +48,39 @@ function generatePassword(){
     var special = window.confirm("Do you want to include special characters?");
   } while (lowercase === false && uppercase === false && numeric === false && special === false);
 
+  for (var i = 0; i < passwordLength; i++) {
+    if (lowercase === true){
+      var lowercaseRand = lowercaseArray[Math.floor(Math.random()*lowercaseArray.length)];
+      passwordArray.push(lowercaseRand);
+    } else {
+      var lowercaseRand = "";
+    }
+
+    if (uppercase === true){
+      var uppercaseRand = uppercaseArray[Math.floor(Math.random()*uppercaseArray.length)];
+      passwordArray.push(uppercaseRand);
+    } else {
+      var uppercaseRand = "";
+    }
+
+    if (numeric === true){
+      var numericRand = numericArray[Math.floor(Math.random()*numericArray.length)];
+      passwordArray.push(numericRand);
+    } else {
+      var numericRand = "";
+    }
+
+    if (special === true){
+      var specialRand = specialArray[Math.floor(Math.random()*specialArray.length)];
+      passwordArray.push(specialRand);
+    } else {
+      var specialRand = "";
+    }
+    }
+
+    var passwordSliced = passwordArray.slice(0,passwordLength);
+    var passwordShuffle = passwordSliced.sort(() => Math.random() - 0.5);
+    var password = passwordShuffle.join('');
+    return password;
+
 }
